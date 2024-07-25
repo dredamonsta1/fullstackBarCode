@@ -7,5 +7,6 @@ class Room(models.Model):
     product = models.CharField(max_length=50, unique=True)
     can_add_photo = models.BooleanField(null=False, default=True)
     vote_as_damaged = models.ImageField(null=False, default=1)
+    created_at = models.DateTimeField()
 
 

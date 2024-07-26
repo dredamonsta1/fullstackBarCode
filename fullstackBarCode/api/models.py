@@ -2,6 +2,7 @@ from django.db import models
 import string
 import random
 
+#region generate code 
 def generate_unique_code():
     length = 6
     while True:
@@ -9,7 +10,8 @@ def generate_unique_code():
         if Room.objects.filter(code=code).count() == 0:
             break
     return code
-# Create your models here.
+
+#region room model
 class Room(models.Model):
     #code === DCPI
     code = models.CharField(max_length=20, default="", unique=True)

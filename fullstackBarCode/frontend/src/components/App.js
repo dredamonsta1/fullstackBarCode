@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import HomePage from "./HomePage";
 
 
 export default class App extends Component {
@@ -9,7 +10,8 @@ export default class App extends Component {
 
     render() {
         return (
-            <h1>Resting React Code</h1>
+            <HomePage />
+            // <h1>Resting React Code Dre</h1>
         )
     }
 }

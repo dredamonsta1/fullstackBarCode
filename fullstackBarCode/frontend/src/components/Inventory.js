@@ -2,8 +2,8 @@ import react from "react";
 
 function Inventory() {
 
-    
-    return ("inventory page")
+
+    return ("inventory page on home")
 }
 
 export default Inventory;

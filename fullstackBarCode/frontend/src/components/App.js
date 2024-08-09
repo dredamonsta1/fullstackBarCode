@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import HomePage from "./HomePage";
-import Inventory from "./Inventory";
+// import Inventory from "./Inventory";
 
 
 export default class App extends Component {
@@ -13,7 +13,6 @@ export default class App extends Component {
         return (
             <>
                 <HomePage />
-                <Inventory />
             </>
         )
     }

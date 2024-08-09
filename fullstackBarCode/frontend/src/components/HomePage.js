@@ -6,12 +6,15 @@ import {
     Route,
     Link,
     redirect,
+    Router,
 } from "react-router-dom";
 
-function HomePage() {
+function HomePage(path) {
 
     return (
         <>
+                        <p>this is the home page</p>
+                    
             <Inventory />
         </>
         

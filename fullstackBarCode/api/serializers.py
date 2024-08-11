@@ -8,3 +8,7 @@ class RoomSerializer(serializers.ModelSerializer):
                   'can_add_photo', 'vote_as_damaged', 
                   'created_at')
         
+class CreateBarcodeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Room
+        fields = ('barcode_to_add', 'barcode_image')

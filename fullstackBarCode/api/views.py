@@ -12,5 +12,11 @@ class RoomView(generics.ListAPIView):
 
 
 class createRoomView(APIView):
+    serializer_class = createRoomSerializer
+
     def post(self, request, format=None):
-        pass
+        if not self.request.session.exists(self.request.session.session_key):
+            self.request.session.create()
+
+        serializer = self.serializer_class(data=request.data)
+        if serializer.is_valid():

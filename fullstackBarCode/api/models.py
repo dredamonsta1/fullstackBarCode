@@ -14,7 +14,7 @@ def generate_unique_code():
 #region room model
 class Room(models.Model):
     #code === DCPI
-    code = models.CharField(max_length=20, default="", unique=True)
+    code = models.CharField(max_length=20, default=generate_unique_code, unique=True)
     product = models.CharField(max_length=50, unique=True)
     can_add_photo = models.BooleanField(null=False, default=True)
     vote_as_damaged = models.ImageField(null=False, default=1)

@@ -9,3 +9,8 @@ from rest_framework.response import Response
 class RoomView(generics.ListAPIView):
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
+
+
+class createRoomView(APIView):
+    def post(self, request, format=None):
+        pass

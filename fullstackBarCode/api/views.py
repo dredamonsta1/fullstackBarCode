@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .serializers import RoomSerializer
+from .serializers import CreateBarcodeSerializer, RoomSerializer
 from .models import Room
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -12,7 +12,7 @@ class RoomView(generics.ListAPIView):
 
 
 class createRoomView(APIView):
-    serializer_class = createRoomSerializer
+    serializer_class = CreateBarcodeSerializer
 
     def post(self, request, format=None):
         if not self.request.session.exists(self.request.session.session_key):
@@ -20,3 +20,5 @@ class createRoomView(APIView):
 
         serializer = self.serializer_class(data=request.data)
         if serializer.is_valid():
+            barcode_to_add = serializer.data.barcode_to_add
+            barcode_image = serializer.data.barcode_image

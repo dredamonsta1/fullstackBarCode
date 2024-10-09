@@ -13,6 +13,9 @@ export default class App extends Component {
         return (
             <>
                 <HomePage />
+                <Button
+                    title="press me"
+                />
             </>
         )
     }

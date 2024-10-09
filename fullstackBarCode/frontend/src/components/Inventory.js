@@ -1,9 +1,13 @@
 import react from "react";
 
 function Inventory() {
+    console.log("inventory component")
 
-
-    return ("inventory page on home")
+    return (
+        <Button
+            title="scan"
+        />
+    )
 }
 
 export default Inventory;

@@ -13,7 +13,7 @@ function HomePage(path) {
 
     return (
         <>
-                        <p>this is the home page</p>
+                        <p>refresh please</p>
                     
             <Inventory />
         </>
